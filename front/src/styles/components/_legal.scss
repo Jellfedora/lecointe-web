@@ -1,0 +1,50 @@
+.legal {
+  padding: 0 1em;
+  & h1 {
+    text-align: center;
+    margin: 1.5em auto 1.5em auto;
+    color: $color-secondary;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    font-size: 2.3em;
+    margin-bottom: 0.5em;
+  }
+  & div {
+    letter-spacing: 0;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+    & h2 {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+    & p {
+      margin-bottom: 0.5em;
+      & a {
+        font-weight: bold;
+        color: $color-secondary;
+      }
+    }
+    & span {
+      & h3 {
+        font-weight: bold;
+      }
+    }
+    & span {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .legal {
+    width: 65%;
+    margin: 0 auto;
+    & h1 {
+      font-size: 2.6em;
+    }
+    & div {
+      font-size: 1.3em;
+    }
+  }
+}
