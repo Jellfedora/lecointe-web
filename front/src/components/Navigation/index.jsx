@@ -29,14 +29,14 @@ class Navbar extends Component {
         <Router>
           <Switch>
             <Route path="/legal">
-              <ScrollToTop />
+              <ScrollToTop showForMobile={true} />
               <HeaderOther />
               {/* <Parallax image={Computer} align="left" /> */}
               <Legal />
             </Route>
             <Route path="/">
               <FloatMenu />
-              <ScrollToTop />
+              <ScrollToTop showForMobile={false} />
               <Header />
               <Banner />
               <Parallax image={Computer} align="left" />

@@ -56,7 +56,10 @@ class ScrollToTop extends Component {
 
   render() {
     return (
-      <div className="scroll-to-top">
+      <div
+        className="scroll-to-top"
+        style={{ display: this.props.showForMobile ? "inherit" : "none" }}
+      >
         <Fade right when={this.state.showMenu}>
           <button
             className="scroll-to-top__button"
