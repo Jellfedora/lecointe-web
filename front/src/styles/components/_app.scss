@@ -1,0 +1,11 @@
+.app {
+  // padding-top: 1.5em;
+  // background-color: $color-primary;
+  min-height: 100vh;
+  &__divider {
+    width: 50%;
+    border: none;
+    height: 1px;
+    background-color: $color-secondary;
+  }
+}
