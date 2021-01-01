@@ -1,0 +1,144 @@
+.float-menu {
+  &__button {
+    position: fixed;
+    right: 1.5em;
+    bottom: 1.5em;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    padding: 1.5em;
+    background-color: $color-secondary;
+    color: $color-primary;
+    z-index: 5000;
+    border: 1px solid $color-white;
+    outline: none;
+    & svg {
+      position: relative;
+      bottom: 0.5em;
+      right: 0.4em;
+    }
+  }
+  &__button:hover {
+    background-color: $color-primary;
+    color: $color-secondary;
+  }
+  &__links {
+    &__link {
+      color: $color-white;
+      text-transform: uppercase;
+      display: block;
+      margin: 0.5em;
+      font-size: 1.2em;
+      letter-spacing: 3px;
+      font-weight: 300;
+      margin: 1em !important;
+      // width: 100%;
+      text-align: center;
+    }
+    &__link:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  display: none;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $color-secondary;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: $color-secondary;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  width: 80vw !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  outline: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & img {
+    width: 5em;
+    height: 5em;
+    outline: none;
+  }
+  & div {
+    // height: 100%;
+  }
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block !important;
+  height: 1em;
+  outline: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+}
+
+.float-menu__links {
+  height: 50vh;
+  display: flex !important;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.float-menu__img {
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .float-menu {
+    width: 65%;
+    display: none;
+  }
+}
