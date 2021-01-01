@@ -1,0 +1,49 @@
+.price {
+  padding: 0 1em;
+  &__title {
+    text-align: center;
+    margin: 1.5em auto 1.5em auto;
+    color: $color-secondary;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    & h2 {
+      font-size: 2.3em;
+      margin-bottom: 0.2em;
+    }
+    & span {
+      font-weight: 300;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 1.3em;
+      line-height: 1.5em;
+      color: #646363;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    & p {
+      width: 100%;
+      font-weight: 300;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+    & button {
+      margin: 2em auto;
+      padding: 0.5em;
+      font-weight: bold;
+      color: $color-secondary;
+      border: 5px solid $color-primary;
+      background-color: $color-primary;
+      border-radius: 5px;
+    }
+    & small {
+      font-size: 0.8em;
+      width: 100%;
+      font-weight: bold;
+      padding-bottom: 1.5em;
+    }
+  }
+}

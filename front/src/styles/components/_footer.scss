@@ -1,0 +1,96 @@
+.footer {
+  //   height: 15em;
+  overflow: hidden;
+  &__animation > :first-child {
+    // display: block; /* modèle de boîte en ligne */
+    // padding-right: 2em; /* un peu d'espace pour la transition */
+    //   padding-left: 0%; /* placement à droite du conteneur */
+    // white-space: nowrap; /* pas de passage à la ligne */
+    animation: defilement-rtl 150s infinite linear;
+  }
+  &__animation svg {
+    margin-bottom: -2em;
+    overflow: hidden;
+  }
+  &__content {
+    background-color: $color-secondary;
+    padding: 0.5em 1em 0.5em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__contact {
+      margin-bottom: 1em;
+      text-align: left;
+      width: 100%;
+      & h2 {
+        margin-bottom: 1em;
+        font-size: 1em;
+        text-transform: uppercase;
+        color: white;
+      }
+      & img {
+        padding-top: 1em;
+        display: block;
+        margin: 0 auto;
+        height: 4em;
+        width: 4em;
+      }
+      & div {
+        color: $color-primary;
+        text-align: center;
+        margin-bottom: 0.5em;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9em;
+        & svg {
+          margin-right: 0.5em;
+        }
+        & a {
+          color: $color-grey;
+        }
+      }
+    }
+    &__legal {
+      text-align: center;
+      font-size: 0.8em;
+      color: $color-white;
+      & p {
+        margin-bottom: 0.5em;
+      }
+      & span a {
+        text-decoration: underline;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+@keyframes defilement-rtl {
+  0% {
+    transform: translate3d(0, 0, 0); /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-75%, 0, 0); /* position finale à gauche */
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    &__content {
+      &__contact {
+        text-align: center;
+        & h2,
+        a {
+          font-size: 1.3em;
+        }
+        & div {
+          justify-content: center;
+        }
+      }
+      &__legal {
+        font-size: 1.1em;
+      }
+    }
+  }
+}

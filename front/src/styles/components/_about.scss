@@ -1,0 +1,108 @@
+.about {
+  padding: 0 1em;
+  height: 30em;
+  &__title {
+    text-align: center;
+    margin: 1.5em auto 1.5em auto;
+    color: $color-secondary;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    & h2 {
+      font-size: 2.3em;
+      margin-bottom: 0.2em;
+    }
+    & span {
+      font-weight: 300;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 1.3em;
+      line-height: 1.5em;
+      color: #646363;
+    }
+  }
+  &__content {
+    width: 100%;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1em;
+    line-height: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__arrows {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding-top: 20em;
+      background-color: transparent;
+      & button {
+        cursor: pointer;
+        border: none;
+        color: $color-primary;
+        transition: 1s;
+        background-color: transparent;
+        padding: 0.5em;
+        border-radius: 20%;
+      }
+      & button:hover {
+        color: $color-secondary;
+        background-color: $color-secondary;
+        border-radius: 50%;
+      }
+    }
+    &__text {
+      position: absolute;
+      border-radius: 2em;
+      margin: 0 1em;
+      & h3 {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      & p {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .about {
+    height: 20em;
+    &__content {
+      &__arrows {
+        padding-top: 12em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    width: 65%;
+    margin: 2.5em auto 0 auto;
+    height: 22em;
+    &__title {
+      & h2 {
+        font-size: 2.6em;
+      }
+      & span {
+        font-size: 1.6em;
+      }
+    }
+    &__content {
+      &__text {
+        width: 65%;
+        & h3,
+        p {
+          font-size: 1.3em;
+        }
+      }
+      &__arrows {
+        padding-top: 13em;
+      }
+    }
+  }
+}
