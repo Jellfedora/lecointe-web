@@ -1,4 +1,6 @@
 import React from "react";
+// Import Google Analytics
+import ReactGA from "react-ga";
 // Import Redux Store
 import { Provider } from "react-redux";
 import store from "../../store";
@@ -6,7 +8,6 @@ import store from "../../store";
 import "../../styles/index.scss";
 // Import Components
 import Navigation from "../Navigation";
-
 // Fontawesome 5
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -49,6 +50,10 @@ library.add(
   faClock,
   faArrowUp
 );
+
+const gAId = process.env.REACT_APP_GOOGLE_ANALYTICS;
+ReactGA.initialize(gAId);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => {
   return (
