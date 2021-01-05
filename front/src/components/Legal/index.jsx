@@ -12,6 +12,7 @@ class Legal extends Component {
   }
   componentDidMount() {
     scroll.scrollToTop();
+    document.title = "Lecointe Web | Mentions Légales";
   }
 
   render() {
@@ -227,6 +228,27 @@ class Legal extends Component {
           <p>
             Le site n'est pas déclaré à la CNIL car il ne recueille pas
             d'informations personnelles.
+          </p>
+        </div>
+        <div>
+          <h2>8. Cookies.</h2>
+          <p>
+            La navigation sur le site{" "}
+            <a href="https://julien-lecointe.hopto.org">
+              {" "}
+              julien-lecointe.hopto.org{" "}
+            </a>{" "}
+            est susceptible de provoquer l'installation de cookie(s) sur
+            l'ordinateur de l'utilisateur. Un cookie est un fichier de petite
+            taille, qui ne permet pas l'identification de l'utilisateur, mais
+            qui enregistre des informations relatives à la navigation d'un
+            ordinateur sur un site. Les données ainsi obtenues visent à
+            faciliter la navigation ultérieure sur le site, et ont également
+            vocation à permettre diverses mesures de fréquentation.
+          </p>
+          <p>
+            Cookies de sessions présents sur ce site ={">"} ga: Cookies propres
+            à Google Analytics (statistiques)
           </p>
         </div>
         <div>
