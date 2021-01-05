@@ -58,13 +58,11 @@ class ScrollToTop extends Component {
     return (
       <div
         className="scroll-to-top"
+        onClick={() => this.scrollTop()}
         style={{ display: this.props.showForMobile ? "inherit" : "none" }}
       >
         <Fade right when={this.state.showMenu}>
-          <button
-            className="scroll-to-top__button"
-            onClick={() => this.scrollTop()}
-          >
+          <button className="scroll-to-top__button">
             <FontAwesomeIcon icon="arrow-up" size="2x" />
           </button>
         </Fade>

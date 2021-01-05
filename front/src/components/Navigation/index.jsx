@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
+import CookieConsent from "react-cookie-consent";
 import Header from "../Header";
 import Banner from "../Banner";
 import Services from "../Services";
@@ -51,6 +52,27 @@ class Navbar extends Component {
           </Switch>
           <Footer />
         </Router>
+        <CookieConsent
+          buttonText="J'accepte"
+          location="bottom"
+          expires={150}
+          style={{
+            background: "#8bc8fb",
+            color: "#020202",
+            fontSize: "13px",
+            zIndex: "5001",
+          }}
+          buttonStyle={{
+            color: "#8bc8fb",
+            background: "#020202",
+            fontSize: "13px",
+          }}
+        >
+          Votre expérience sur mon site est une priorité, c'est pourquoi
+          j'utilise des cookies au titre de mon intérêt à améliorer votre
+          expérience utilisateur. En poursuivant votre navigation, vous acceptez
+          le dépôt de cookies.
+        </CookieConsent>
       </div>
     );
   }
